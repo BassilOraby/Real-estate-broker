@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broker(1)</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/Cards section.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-v2-Modal--Full-with-Google-Map.css">
+    <link rel="stylesheet" href="assets/css/dh-navbar-centered-brand.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body><header><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</header><!-- Modal -->
+<div class="modal fade" id="sell_Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+    <div class="container-fluid">
+        <h1>Contact Information</h1>
+        <hr />
+        <form action="javascript:void(0);" method="get" id="contactForm"><input class="form-control" type="hidden" name="Introduction" value="This email was sent from www.awebsite.com" /><input class="form-control" type="hidden" name="subject" value="Awebsite.com Contact Form" /><input class="form-control" type="hidden"
+                name="to" value="email@awebsite.com" />
+            <div class="form-row">
+                <div class="col-md-6">
+                    <div id="successfail"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-12 col-md-6" id="message">
+                    <h2 class="h4"><i class="fa fa-envelope"></i>Contact Us<small><small class="required-input">(*required)</small></small>
+                    </h2>
+                    <div class="form-group"><label for="from-name">Name</label><span class="required-input">*</span>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div><input class="form-control" type="text" name="name" required placeholder="Full Name" id="from-name" /></div>
+                    </div>
+                    <div class="form-group"><label for="from-email">Email</label><span class="required-input">*</span>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div><input class="form-control" type="text" name="email" required placeholder="Email Address" id="from-email" /></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <div class="form-group"><label for="from-phone">Phone</label><span class="required-input">*</span>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-phone"></i></span></div><input class="form-control" type="text" name="phone" required placeholder="Primary Phone" id="from-phone" /></div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <div class="form-group marg"><label for="from-calltime">Best Time to Call</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></div><select class="form-control" name="call time" id="from-calltime"><optgroup label="Best Time to Call"><option value="Morning" selected>Morning</option><option value="Afternoon">Afternoon</option><option value="Evening">Evening</option></optgroup></select></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group"><label for="from-comments">Comments</label><textarea class="form-control" rows="5" name="comments" placeholder="Enter Comments" id="from-comments"></textarea></div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col"><button class="btn btn-primary btn-block" type="reset"><i class="fa fa-undo"></i>Reset</button></div>
+                            <div class="col"><button class="btn btn-primary btn-block" type="submit">Submit<i class="fa fa-chevron-circle-right"></i></button></div>
+                        </div>
+                    </div>
+                    <hr class="d-flex d-md-none" />
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2 class="h4"><i class="fa fa-location-arrow"></i>Locate Us</h2>
+                    <div class="form-row">
+                        <div class="col-12">
+                            <div class="static-map"><a href="https://www.google.com/maps/place/Daytona+International+Speedway/@29.1815062,-81.0744275,15z/data=!4m13!1m7!3m6!1s0x88e6d935da1cced3:0xa6b3e1bc0f2fc83a!2s1801+W+International+Speedway+Blvd,+Daytona+Beach,+FL+32114!3b1!8m2!3d29.187028!4d-81.0703076!3m4!1s0x88e6d949a4cb8593:0x1387c6c0b5c8cc97!8m2!3d29.1851681!4d-81.0705292"
+                                    target="_blank" rel="noopener"><img class="img-fluid" src="http://maps.googleapis.com/maps/api/staticmap?autoscale=2&amp;size=600x210&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C582+1801+W+International+Speedway+Blvd+Daytona+Beach+FL+32114&amp;zoom=12" alt="Google Map of Daytona International Speedway" /></a></div>
+                        </div>
+                        <div class="col-sm-6 col-md-12 col-lg-6">
+                            <h2 class="h4"><i class="fa fa-user"></i>Our Info</h2>
+                            <div><span><strong>Name</strong></span></div>
+                            <div><span>email@awebsite.com</span></div>
+                            <div><span>www.awebsite.com</span></div>
+                            <hr class="d-sm-none d-md-block d-lg-none" />
+                        </div>
+                        <div class="col-sm-6 col-md-12 col-lg-6">
+                            <h2 class="h4"><i class="fa fa-location-arrow"></i>Our Address</h2>
+                            <div><span><strong>Office Name</strong></span></div>
+                            <div><span>55 Icannot Dr</span></div>
+                            <div><span>Daytone Beach, FL 85150</span></div>
+                            <div>
+                                <div><abbr data-toggle="tooltip" data-placement="top" title="Office Phone: 555-867-5309">O:</abbr>555-867-5309</div>
+                            </div>
+                            <hr class="d-sm-none" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Contact Information</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <form action="javascript:void(0);" method="get" id="contactForm"><input class="form-control" type="hidden" name="Introduction" value="This email was sent from www.awebsite.com" /><input class="form-control" type="hidden" name="subject" value="Awebsite.com Contact Form" /><input class="form-control"
+                            type="hidden" name="to" value="email@awebsite.com" />
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div id="successfail"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-6" id="message">
+                                <h2 class="h4"><i class="fa fa-envelope"></i>Contact Us<small><small class="required-input">(*required)</small></small>
+                                </h2>
+                                <div class="form-group"><label for="from-name">Name</label><span class="required-input">*</span>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user-o"></i></span></div><input class="form-control" type="text" name="name" required placeholder="Full Name" id="from-name" /></div>
+                                </div>
+                                <div class="form-group"><label for="from-email">Email</label><span class="required-input">*</span>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope-o"></i></span></div><input class="form-control" type="text" name="email" required placeholder="Email Address" id="from-email" /></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                        <div class="form-group"><label for="from-phone">Phone</label><span class="required-input">*</span>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-phone"></i></span></div><input class="form-control" type="text" name="phone" required placeholder="Primary Phone" id="from-phone" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                        <div class="form-group"><label for="from-calltime">Best Time to Call</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></div><select class="form-control" name="call time" id="from-calltime"><optgroup label="Best Time to Call"><option value="Morning" selected>Morning</option><option value="Afternoon">Afternoon</option><option value="Evening">Evening</option></optgroup></select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group"><label for="from-comments">Comments</label><textarea class="form-control" rows="5" name="comments" placeholder="Enter Comments" id="from-comments"></textarea></div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col"><button class="btn btn-primary btn-block" type="reset"><i class="fa fa-undo"></i>Reset</button></div>
+                                        <div class="col"><button class="btn btn-primary btn-block" type="submit">Submit<i class="fa fa-chevron-circle-right"></i></button></div>
+                                    </div>
+                                </div>
+                                <hr class="d-flex d-md-none" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h2 class="h4"><i class="fa fa-location-arrow"></i>Locate Us</h2>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <div class="static-map"><a href="https://www.google.com/maps/place/Daytona+International+Speedway/@29.1815062,-81.0744275,15z/data=!4m13!1m7!3m6!1s0x88e6d935da1cced3:0xa6b3e1bc0f2fc83a!2s1801+W+International+Speedway+Blvd,+Daytona+Beach,+FL+32114!3b1!8m2!3d29.187028!4d-81.0703076!3m4!1s0x88e6d949a4cb8593:0x1387c6c0b5c8cc97!8m2!3d29.1851681!4d-81.0705292"
+                                                target="_blank" rel="noopener"><img class="img-fluid" src="http://maps.googleapis.com/maps/api/staticmap?autoscale=2&amp;size=600x210&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C582+1801+W+International+Speedway+Blvd+Daytona+Beach+FL+32114&amp;zoom=12" alt="Google Map of Daytona International Speedway" /></a></div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-12 col-lg-6">
+                                        <h2 class="h4"><i class="fa fa-user"></i>Our Info</h2>
+                                        <div><span><strong>Name</strong></span></div>
+                                        <div><span>email@awebsite.com</span></div>
+                                        <div><span>www.awebsite.com</span></div>
+                                        <hr class="d-sm-none d-md-block d-lg-none" />
+                                    </div>
+                                    <div class="col-sm-6 col-md-12 col-lg-6">
+                                        <h2 class="h4"><i class="fa fa-location-arrow"></i>Our Address</h2>
+                                        <div><span><strong>Office Name</strong></span></div>
+                                        <div><span>55 Icannot Dr</span></div>
+                                        <div><span>Daytone Beach, FL 85150</span></div>
+                                        <div>
+                                            <div><abbr data-toggle="tooltip" data-placement="top" title="Office Phone: 555-867-5309">O:</abbr>555-867-5309</div>
+                                        </div>
+                                        <hr class="d-sm-none" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top" style="background-repeat:no-repeat;background-color:#000000;">
+        <div class="container-fluid"><a class="navbar-brand navbar-brand-centered" href="#"> <img src="assets/img/dh.png" id="img" style="max-height:50px;"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1" style="color:rgba(0,0,0,0.5);"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon navbar-dark" style="background-image:url(&quot;assets/img/icons8-menu-48.png&quot;);"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1" style="font-family:Ubuntu, sans-serif;">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation" data-bs-hover-animate="jello" id="navitem"><a class="nav-link" href="#" style="color:rgb(255,255,255);font-style:normal;">Buy</a></li>
+                    <li class="nav-item" role="presentation" id="navitem"><a class="nav-link" href="#" data-bs-hover-animate="jello" style="color:rgb(255,255,255);">Rent</a></li>
+                    <li class="nav-item" role="presentation" id="navitem"><a class="nav-link" href="#" data-bs-hover-animate="jello" style="color:rgb(255,255,255);" data-toggle="modal" data-target="#sell_Modal">Sell</a></li>
+                    <li class="nav-item" role="presentation" id="navitem"><a class="nav-link" href="#" data-bs-hover-animate="jello" style="color:rgb(255,255,255);">Blog</a></li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation" id="naviten"><a class="nav-link" href="#" data-bs-hover-animate="jello" style="color:rgb(255,255,255);">Sign in</a></li>
+                    <li class="nav-item" role="presentation" id="naviten"><a class="nav-link" href="#" data-bs-hover-animate="jello" style="color:rgb(255,255,255);">Sign up</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <div data-bs-parallax-bg="true" id="parallax" style="background-position:center;background-size:cover;background-repeat:no-repeat;">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" id="cont" style="background-color:rgba(45,45,45,0.68);margin-top:63px;">
+            <div class="row justify-content-center align-items-center align-content-center align-self-center" style="height:433px;">
+                <div class="col"><form>
+    <h4 style="color:white;">Where are you searching?</h4>
+    <div class="input-group">
+      <select class="custom-select" id="inputGroupSelect04">
+        <option selected>Location</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="margo">
+        <h4 style="color:white;">What type of property are you searching for?</h4>
+    <div class="input-group">
+      <select class="custom-select" id="inputGroupSelect04">
+        <option selected>Type of Unit</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    </div>
+     <div class="margo">
+        <h4 style="color:white;">What's your budget?</h4>
+     <div class="input-group">
+      <select class="custom-select" id="inputGroupSelect04">
+        <option selected>Budget</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    </div>
+</form></div>
+            </div><button class="btn btn-primary d-flex mx-auto" type="button" id="search-Button">Search</button></div>
+        <div class="jumbotron" data-aos="fade-up" data-aos-duration="1000" id="jumbo" style="color:rgb(255,255,255);">
+            <h1 data-aos="fade-up" data-aos-duration="1000" id="jumbex">Let's find you a home !</h1>
+        </div>
+        <div style="background-image: url(&quot;file:///E:/College/Side-Projects/real_estate_broker/home%20page/assets/img/lynnestair-exterior-hudsonvalley-veranda-jpg-1565722565.jpg&quot;); background-size: cover; background-position: center center; position: absolute; height: 200%; width: 100%; top: 0px; left: 0px; z-index: -100; transform: translate3d(0px, -25.7289%, 0px);"></div>
+    </div>
+    <section data-aos="fade" id="Sect2">
+        <div class="jumbotron d-flex justify-content-center" style="background-color:rgb(255,255,255);margin-bottom:-29px;"><button class="btn btn-outline-primary btn-block" type="button" disabled="disabled" id="btn1">Button</button>
+            <h1 style="font-size:51px;color:rgb(0,0,0);">Recommended &nbsp; &nbsp; &nbsp; For You</h1><button class="btn btn-outline-primary btn-block" type="button" disabled="disabled" id="btn2">Button</button></div>
+        <section data-aos="fade-up" data-aos-duration="1000"><div class="wrapper">
+        <div class="row">
+            <div class="col-xl-4">
+            <div class="card">
+                <input type="checkbox" id="card1" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front" style="background-image: url('https://images.unsplash.com/photo-1529408686214-b48b8532f72c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=986e2dee5c1b488d877ad7ba1afaf2ec&auto=format&fit=crop&w=1350&q=80')">
+                        <div class="inner">
+                            <h2>Cozy apartment</h2>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <label for="card1" class="button" aria-hidden="true">
+                                Details
+                            </label>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="info">
+                                <span>5</span>
+                                <div class="icon">
+                                    <i class="fa fa-users"></i>
+                                    <span>people</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>4</span>
+                                <div class="icon">
+                                    <i class="fa fa-door-open"></i>
+                                    <span>rooms</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>3</span>
+                                <div class="icon">
+                                    <i class="fa fa-bed"></i>
+                                    <span>beds</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>1</span>
+                                <div class="icon">
+                                    <i class="fa fa-bath"></i>
+                                    <span>bath</span>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                    ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                    tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                            </div>
+                            <div class="location">Warsaw, Poland</div>
+                            <div class="price">38€ / day</div>
+                            <label for="card1" class="button return" aria-hidden="true">
+                                <i class="fa fa-arrow-left"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-xl-4">
+            <div class="card">
+                <input type="checkbox" id="card2" class="more">
+                <div class="content">
+                    <div class="front" style="background-image: url('https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c02fb96f9cfc16d3649835b75d1b2033&auto=format&fit=crop&w=1350&q=80')">
+                        <div class="inner">
+                            <h2>Modern flat</h2>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-alt"></i>
+                            </div>
+                            <label for="card2" class="button" aria-hidden="true">
+                                Details
+                            </label>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="info">
+                                <span>4</span>
+                                <div class="icon">
+                                    <i class="fa fa-users"></i>
+                                    <span>people</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>3</span>
+                                <div class="icon">
+                                    <i style='font-size:19px' class='fas'>&#xf52b;</i>
+                                    <span>rooms</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>2</span>
+                                <div class="icon">
+                                    <i class="fa fa-bed"></i>
+                                    <span>beds</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>1</span>
+                                <div class="icon">
+                                    <i class="fa fa-bath"></i>
+                                    <span>bath</span>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem unde ea voluptas
+                                    fuga
+                                    odio vel veniam eveniet, explicabo autem earum?</p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ul>
+                            </div>
+                            <div class="location">Warsaw, Poland</div>
+                            <div class="price">42€ / day</div>
+                            <label for="card2" class="button return" aria-hidden="true">
+                                <i class="fa fa-arrow-left"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-xl-4">
+            <div class="card">
+                <input type="checkbox" id="card3" class="more">
+                <div class="content">
+                    <div class="front" style="background-image: url('https://images.unsplash.com/photo-1529595354331-201ad3ae5e71?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6114533e2d0c1c81534fe13611dbfd76&auto=format&fit=crop&w=658&q=80')">
+                        <div class="inner">
+                            <h2>Luxury property</h2>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <label for="card3" class="button" aria-hidden="true">
+                                Details
+                            </label>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="info">
+                                <span>8</span>
+                                <div class="icon">
+                                    <i class="fa fa-users"></i>
+                                    <span>people</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>7</span>
+                                <div class="icon">
+                                    <i class="fa fa-door-open"></i>
+                                    <span>rooms</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>5</span>
+                                <div class="icon">
+                                    <i class="fa fa-bed"></i>
+                                    <span>beds</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>2</span>
+                                <div class="icon">
+                                    <i class="fa fa-bath"></i>
+                                    <span>baths</span>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa libero
+                                    totam nostrum consequatur autem quae provident quos alias fugit maxime nisi labore,
+                                    temporibus tempore illo natus voluptates aliquam ipsum officia quasi placeat aut
+                                    facilis
+                                    laudantium nam!</p>
+                                <p>Quam, iusto.Neque ratione ut deserunt unde dicta nesciunt,
+                                    repudiandae
+                                    aspernatur explicabo numquam! Tenetur!</p>
+                            </div>
+                            <div class="location">Cracow, Poland</div>
+                            <div class="price">60€ / day</div>
+                            <label for="card3" class="button return" aria-hidden="true">
+                                <i class="fa fa-arrow-left"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+        </div>
+     <div class="row">
+            <div class="col-xl-4">
+            <div class="card">
+                <input type="checkbox" id="card4" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front" style="background-image: url('https://images.unsplash.com/photo-1529408686214-b48b8532f72c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=986e2dee5c1b488d877ad7ba1afaf2ec&auto=format&fit=crop&w=1350&q=80')">
+                        <div class="inner">
+                            <h2>Cozy apartment</h2>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <label for="card4" class="button" aria-hidden="true">
+                                Details
+                            </label>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="info">
+                                <span>5</span>
+                                <div class="icon">
+                                    <i class="fa fa-users"></i>
+                                    <span>people</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>4</span>
+                                <div class="icon">
+                                    <i class="fa fa-door-open"></i>
+                                    <span>rooms</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>3</span>
+                                <div class="icon">
+                                    <i class="fa fa-bed"></i>
+                                    <span>beds</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>1</span>
+                                <div class="icon">
+                                    <i class="fa fa-bath"></i>
+                                    <span>bath</span>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                    ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                    tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                            </div>
+                            <div class="location">Warsaw, Poland</div>
+                            <div class="price">38€ / day</div>
+                            <label for="card4" class="button return" aria-hidden="true">
+                                <i class="fa fa-arrow-left"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-xl-4">
+            <div class="card">
+                <input type="checkbox" id="card5" class="more">
+                <div class="content">
+                    <div class="front" style="background-image: url('https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c02fb96f9cfc16d3649835b75d1b2033&auto=format&fit=crop&w=1350&q=80')">
+                        <div class="inner">
+                            <h2>Modern flat</h2>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-alt"></i>
+                            </div>
+                            <label for="card5" class="button" aria-hidden="true">
+                                Details
+                            </label>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="info">
+                                <span>4</span>
+                                <div class="icon">
+                                    <i class="fa fa-users"></i>
+                                    <span>people</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>3</span>
+                                <div class="icon">
+                                    <i style='font-size:19px' class='fas'>&#xf52b;</i>
+                                    <span>rooms</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>2</span>
+                                <div class="icon">
+                                    <i class="fa fa-bed"></i>
+                                    <span>beds</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>1</span>
+                                <div class="icon">
+                                    <i class="fa fa-bath"></i>
+                                    <span>bath</span>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem unde ea voluptas
+                                    fuga
+                                    odio vel veniam eveniet, explicabo autem earum?</p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ul>
+                            </div>
+                            <div class="location">Warsaw, Poland</div>
+                            <div class="price">42€ / day</div>
+                            <label for="card5" class="button return" aria-hidden="true">
+                                <i class="fa fa-arrow-left"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-xl-4">
+            <div class="card">
+                <input type="checkbox" id="card6" class="more">
+                <div class="content">
+                    <div class="front" style="background-image: url('https://images.unsplash.com/photo-1529595354331-201ad3ae5e71?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6114533e2d0c1c81534fe13611dbfd76&auto=format&fit=crop&w=658&q=80')">
+                        <div class="inner">
+                            <h2>Luxury property</h2>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <label for="card6" class="button" aria-hidden="true">
+                                Details
+                            </label>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="info">
+                                <span>8</span>
+                                <div class="icon">
+                                    <i class="fa fa-users"></i>
+                                    <span>people</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>7</span>
+                                <div class="icon">
+                                    <i class="fa fa-door-open"></i>
+                                    <span>rooms</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>5</span>
+                                <div class="icon">
+                                    <i class="fa fa-bed"></i>
+                                    <span>beds</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span>2</span>
+                                <div class="icon">
+                                    <i class="fa fa-bath"></i>
+                                    <span>baths</span>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa libero
+                                    totam nostrum consequatur autem quae provident quos alias fugit maxime nisi labore,
+                                    temporibus tempore illo natus voluptates aliquam ipsum officia quasi placeat aut
+                                    facilis
+                                    laudantium nam!</p>
+                                <p>Quam, iusto.Neque ratione ut deserunt unde dicta nesciunt,
+                                    repudiandae
+                                    aspernatur explicabo numquam! Tenetur!</p>
+                            </div>
+                            <div class="location">Cracow, Poland</div>
+                            <div class="price">60€ / day</div>
+                            <label for="card6" class="button return" aria-hidden="true">
+                                <i class="fa fa-arrow-left"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+        </div>
+</div></section>
+    </section>
+    <div data-aos="fade-up" data-aos-duration="1000" class="article-list">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center" style="font-size:51px;color:rgb(0,0,0);">Latest Articles</h2>
+                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+            </div>
+            <div class="row articles">
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
+                    <h3 class="name">Article Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+                <div
+                    class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/building.jpg"></a>
+                    <h3 class="name">Article Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+            <div
+                class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/loft.jpg"></a>
+                <h3 class="name">Article Title</h3>
+                <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+    </div>
+    <div class="row articles">
+        <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
+            <h3 class="name">Article Title</h3>
+            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+        <div
+            class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/building.jpg"></a>
+            <h3 class="name">Article Title</h3>
+            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+    <div
+        class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/loft.jpg"></a>
+        <h3 class="name">Article Title</h3>
+        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+        </div>
+        </div>
+        </div>
+        <div class="footer-dark" style="background-color:rgb(0,0,0);">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="#">Buy</a></li>
+                                <li><a href="#">Sell</a></li>
+                                <li><a href="#">Rent</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3>Broker.com</h3>
+                            <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                        </div>
+                        <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                    </div>
+                    <p class="copyright">Broker © 2021</p>
+                </div>
+            </footer>
+        </div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/bs-animation.js"></script>
+        <script src="assets/js/Contact-Form-v2-Modal--Full-with-Google-Map.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

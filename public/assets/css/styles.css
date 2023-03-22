@@ -1,0 +1,100 @@
+#jumbo {
+  background-color:transparent;
+  text-align:center;
+  margin-top:-622px;
+  padding:0px 32px;
+  padding-top:115px;
+  padding-right:43px;
+}
+
+@media (min-width: 576px) {
+  #jumbo {
+    background-color:transparent;
+    text-align:center;
+    margin-top:-622px;
+    padding:0px 32px;
+    padding-top:115px;
+    padding-right:43px;
+  }
+}
+
+@media (max-width: 575px) {
+  #jumbex {
+    font-size:0px;
+    font-family:Archivo, sans-serif;
+  }
+}
+
+@media (min-width: 768px) {
+  #jumbex {
+    font-size:53px;
+    font-family:Archivo, sans-serif;
+  }
+}
+
+@media (min-width: 576px) {
+  #jumbex {
+    font-size:43px;
+    font-family:Archivo, sans-serif;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .animated {
+    -o-transition-property:none !important;
+    -moz-transition-property:none !important;
+    -ms-transition-property:none !important;
+    -webkit-transition-property:none !important;
+    transition-property:none !important;
+    -o-transform:none !important;
+    -moz-transform:none !important;
+    -ms-transform:none !important;
+    -webkit-transform:none !important;
+    transform:none !important;
+    -webkit-animation:none !important;
+    -moz-animation:none !important;
+    -o-animation:none !important;
+    -ms-animation:none !important;
+    animation:none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  #cont {
+    margin-bottom:25px;
+    width:687px;
+    margin-top:93px;
+    height:512px;
+    padding-top:64px;
+    border-radius:15px;
+  }
+}
+
+#Form {
+  width:1110px;
+}
+
+#button {
+  width:100%;
+}
+
+#helptext {
+  font-size:26px;
+  color:rgb(255,255,255);
+}
+
+.margo {
+  margin-top:27px;
+}
+
+label {
+  display:block;
+}
+
+.marg {
+  margin-top:23px;
+}
+
+#contactForm {
+}
+
